@@ -8,3 +8,4 @@ const Color colorWhite = Colors.white;
 const Color colorLightGrey = Colors.blueGrey;
 const Color colorDarkGrey = Colors.grey;
 const Color colorGreen = Color.fromRGBO(21, 121, 72, 1);
+const Color colorWhiteOpacity = Colors.white12;

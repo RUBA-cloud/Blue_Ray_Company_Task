@@ -19,7 +19,6 @@ class SliderController extends GetxController {
   }
 
   Future<List> getData() async {
-    await PostServices().sendData(route: getSliders);
     
 
 
@@ -31,6 +30,8 @@ class SliderController extends GetxController {
           image: "assets/Image/ImageDress.jpeg")
     ];
     update();
+    // await PostServices().sendData(route: getSliders,body: mapLang);
+  
     //Backeend But There No Data in Server 
     // var data = (json.decode(PostServices.responseBody));
 // //The Slider List From Backend But There No Data in server I dealed as Local Data

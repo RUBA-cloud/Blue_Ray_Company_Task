@@ -12,12 +12,14 @@ class HomePage extends StatelessWidget {
       Get.put(BottomNavigationController(),);
     return GetBuilder<BottomNavigationController>(builder:(controller) {
 
-return SafeArea(child: Scaffold(body: IndexedStack(index: controller.tabIndex,
+return SafeArea(child: Scaffold(
+  body: 
+IndexedStack(index: controller.tabIndex,
   children:const [
 CategoriesPages(),
-Text("data"),
-Text("data"),
-Text("data"),
+CategoriesPages(),
+CategoriesPages(),
+CategoriesPages(),
 
 ]),
 bottomNavigationBar:BottomNavigationView(controller: controller,),

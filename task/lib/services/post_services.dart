@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 import 'package:task/helpers/routes.dart';
 import 'package:task/model/exported_packages.dart';
 
-class PostServices {
+class PostServices extends GetxService {
   //Send Data
 
   //Handle Status Code
@@ -14,12 +14,10 @@ class PostServices {
 
   Future sendData({
     required String route,
+    required var body,
   }) async {
-    //
     try {
-      print("object");
-
-      var response = await http.post(Uri.parse(route), body: ({"lang": "ar"}));
+      var response = await http.post(Uri.parse(route), body: body);
       print(response.body.toString());
       checkStatusCode(statusCode: response.statusCode, response: response.body);
 
@@ -41,7 +39,6 @@ class PostServices {
     switch (statusCode) {
       case (200):
         responseBody = (response);
-       
 
         break;
       case (404):

@@ -17,7 +17,7 @@ class SliderWidget extends StatelessWidget {
         logoWhite,
        
           Container(
-            height: 130,
+            height: 110,
             // ignore: sort_child_properties_last
             child: Padding(
               padding: const EdgeInsets.all(2.0),
@@ -40,8 +40,7 @@ class SliderWidget extends StatelessWidget {
                 ],
               ),
             ),
-            margin: const EdgeInsets.all(0.0),
-            padding: const EdgeInsets.all(3.0),
+          
             decoration: BoxDecoration(
               border: Border.all(color: colorWhite),
             ),

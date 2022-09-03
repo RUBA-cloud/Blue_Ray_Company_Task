@@ -1,5 +1,6 @@
 // ignore: file_names
-import 'package:http/http.dart';
+
+import 'package:task/Controller/product_controller.dart';
 import 'package:task/model/category_model.dart';
 import 'package:task/model/exported_packages.dart';
 
@@ -18,17 +19,19 @@ class CategoryController extends GetxController {
     // TODO: implement onClose
     super.onClose();
   }
+
   void selectedCategory({var index, var id}) {
     this.index = index;
 
     update();
-    
+    productController.setCategoryId(id: id);
+
   }
 
   // ignore: non_constant_identifier_names
   Future<List> getData() async {
     //From Backend But There No Api send in task
-    //  PostServices().sendData(route: getCategory);
+    //  PostServices().sendData(route: getCategory,body: mapLang);
     // var dataList = json.decode(PostServices.responseBody);
     // list = dataList.map((data) => CategoryModel.fromMap(data));
 
@@ -36,7 +39,7 @@ class CategoryController extends GetxController {
     list = [
       //First Brand
       CategoryModel(
-          id: "1",
+          id: "0",
           nameEn: "All",
           nameAr: "الكل",
           branId: "1-1---1-1-1---1--5~3D9D161F-AEED-4ABD-A651-4B2E86ABBB8C"),
@@ -55,12 +58,8 @@ class CategoryController extends GetxController {
           nameEn: "Dress",
           nameAr: "Dress",
           branId: "1-1---1-1-1---1--5~3D9D161F-AEED-4ABD-A651-4B2E86ABBB8C"),
-
-     
     ];
 
-   
-        
     update();
     return list!;
   }

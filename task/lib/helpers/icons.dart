@@ -16,6 +16,7 @@ const faviorateIcon = Icon(
   Icons.favorite,
   color: colorBlack,
 );
+
 const locationIcon = Icon(
   Icons.location_on,
   color: colorBlack,

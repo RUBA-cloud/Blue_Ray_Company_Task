@@ -34,20 +34,7 @@ class SlidersWidget extends StatelessWidget {
                   )
           
         ]), options: CarouselOptions(autoPlay: false),
-        // options: CarouselOptions(
-        //   height: 700,
-   
-        //   viewportFraction: 0.8,
-        //   initialPage: 0,
-        //   enableInfiniteScroll: false,
-        //   reverse: false,
-        //   autoPlay: false,
-        //   autoPlayInterval: const Duration(seconds: 3),
-        //   autoPlayAnimationDuration: const Duration(milliseconds: 800),
-        //   autoPlayCurve: Curves.fastOutSlowIn,
-        //   enlargeCenterPage: true,
-        //   scrollDirection: Axis.horizontal,
-        // ),
+      
       );
     });
   }

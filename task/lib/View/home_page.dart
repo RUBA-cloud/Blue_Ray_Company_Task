@@ -20,6 +20,7 @@ CategoriesPages(),
 CategoriesPages(),
 CategoriesPages(),
 CategoriesPages(),
+CategoriesPages(),
 
 ]),
 bottomNavigationBar:BottomNavigationView(controller: controller,),

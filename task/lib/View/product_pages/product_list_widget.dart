@@ -37,9 +37,8 @@ class ProductListWidget extends GetView<ProductController> {
     ProductController productController = Get.put(ProductController());
 
     //
-    return Obx(() => InkWell(
-        onTap: () => productController.getData(id: '2'),
-        child: controller.list.isEmpty
+    return Obx(() =>
+      controller.list.isEmpty
             ? const Center(
                 child: TextWidget(
                     text: "No Products", textStyle: boldTextStyleBlack),
@@ -53,9 +52,9 @@ class ProductListWidget extends GetView<ProductController> {
                       childAspectRatio: itemWidth / itemHeight),
                   itemBuilder: (BuildContext context, int index) {
                     ProductModel productModel = controller.list[index];
-                    return ProductItemWidget(productModel: productModel,);
+                    return ProductItemWidget(productModel: productModel,index: index,);
                   },
                 ),
-              )));
+              ));
   }
 }

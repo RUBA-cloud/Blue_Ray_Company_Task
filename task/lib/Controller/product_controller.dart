@@ -1,9 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:task/helpers/colors.dart';
 import 'package:task/model/exported_packages.dart';
 import 'package:task/model/product_model.dart';
 
 class ProductController extends GetxController {
 // ignore: deprecated_member_use
   var list = [].obs;
+  var colors = [].obs;
 
   @override
   void onInit() {
@@ -22,9 +25,10 @@ class ProductController extends GetxController {
       list.value = dataList["products_data"]
           .map((e) => ProductModel.fromMap(e))
           .toList();
+
+      colors.value = List.generate(list.length, (index) => colorWhite);
     } else {
       list.value = [];
-      print("objecdjdjdjdt");
     }
 
     update();
@@ -32,5 +36,17 @@ class ProductController extends GetxController {
 
   void setCategoryId({var id}) {
     getData(id: id);
+  }
+
+  void addToFaviorate(int index) {
+    colors[index] = redColor;
+    update();
+    Get.snackbar(
+      "Faviorate Added ",
+      "Faviorate Has Been Added",
+      snackPosition: SnackPosition.BOTTOM,
+      backgroundColor: Colors.lightBlue,
+    );
+    update();
   }
 }

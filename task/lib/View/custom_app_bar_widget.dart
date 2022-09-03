@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-
-import 'package:task/model/exportedPackages.dart';
+import 'package:task/model/exported_packages.dart';
 
 // ignore: camel_case_types
 class CustomAppBarWidget extends StatelessWidget {
@@ -9,14 +8,9 @@ class CustomAppBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: 
-    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children:
-
-     const [
-    homeIcon,
-Text("HomePage")   ,bagIcon ],
-
-));
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: const [homeIcon, Text("HomePage"), bagIcon],
+    );
   }
 }

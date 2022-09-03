@@ -1,10 +1,8 @@
 import 'package:task/helpers/routes.dart';
-import 'package:task/model/exportedPackages.dart';
-import 'package:task/model/slider_model.dart';
-import 'package:task/services/post_services.dart';
+import 'package:task/model/exported_packages.dart';
 
 class SliderController extends GetxController {
-  List<SliderModel>? sliderList;
+  List? sliderList = [];
 
   @override
   void onClose() {
@@ -20,19 +18,29 @@ class SliderController extends GetxController {
     super.onInit();
   }
 
-  Future<List<SliderModel>> getData() async {
-    PostServices().sendData(route: getSliders);
+  Future<List> getData() async {
+    await PostServices().sendData(route: getSliders);
+    
 
-    PostServices().responseBody == null
-        ? sliderList = [SliderModel(id: 1, name: "NEW User Offer", 
-        descripation: "Up To 75%", image: "assets/Image/ImageDress.jpeg")]
-        : sliderList = [
-            SliderModel.fromMap(PostServices().responseBody["Sliders"])
-          ];
+
+    sliderList = [
+      SliderModel(
+          id: 1,
+          name: "NEW User Offer",
+          descripation: "Up To 75%",
+          image: "assets/Image/ImageDress.jpeg")
+    ];
+    update();
+    //Backeend But There No Data in Server 
+    // var data = (json.decode(PostServices.responseBody));
+// //The Slider List From Backend But There No Data in server I dealed as Local Data
+//  sliderList=     await (data["sliders"]).map((e) => SliderModel.fromMap(e)).toList();
+
     return sliderList!;
   }
 
   void cleanUp() {
-    PostServices().responseBody = null;
+    sliderList = [];
+    PostServices.responseBody = null;
   }
 }

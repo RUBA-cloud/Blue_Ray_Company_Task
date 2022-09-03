@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task/View/categories-pages/categories_pages.dart';
 
 
-import '../model/exportedPackages.dart';
+import '../model/exported_packages.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

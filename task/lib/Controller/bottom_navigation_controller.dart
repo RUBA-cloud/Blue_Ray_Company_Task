@@ -1,4 +1,4 @@
-import '../model/exportedPackages.dart';
+import '../model/exported_packages.dart';
 
 class BottomNavigationController extends GetxController {
 // ignore: todo

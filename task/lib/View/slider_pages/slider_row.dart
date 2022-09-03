@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task/helpers/colors.dart';
 import 'package:task/model/slider_model.dart';
 
-import '../../model/exportedPackages.dart';
+import '../../model/exported_packages.dart';
 
 class SliderWidget extends StatelessWidget {
   final SliderModel? sliderModel;

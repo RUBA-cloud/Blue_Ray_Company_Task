@@ -7,3 +7,4 @@ const serverName = "https://avit2.br-ws.com/api/frontend/";
 // ignore: prefer_interpolation_to_compose_strings
 const getSliders = serverName + "getSliders";
 const getBrands = serverName + "getBrands";
+const getCategory = serverName + "";

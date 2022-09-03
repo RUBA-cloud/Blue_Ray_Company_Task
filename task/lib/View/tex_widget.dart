@@ -1,6 +1,6 @@
 
 
-import '../model/exportedPackages.dart';
+import '../model/exported_packages.dart';
 
 class TextWidget extends StatelessWidget {
  

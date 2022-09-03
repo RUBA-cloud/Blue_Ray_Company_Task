@@ -4,13 +4,13 @@ import 'dart:io';
 
 import 'package:http/http.dart' as http;
 import 'package:task/helpers/routes.dart';
-import 'package:task/model/exportedPackages.dart';
+import 'package:task/model/exported_packages.dart';
 
 class PostServices {
   //Send Data
 
   //Handle Status Code
-  var responseBody;
+  static var responseBody;
 
   Future sendData({
     required String route,
@@ -18,7 +18,9 @@ class PostServices {
     //
     try {
       print("object");
+
       var response = await http.post(Uri.parse(route), body: ({"lang": "ar"}));
+      print(response.body.toString());
       checkStatusCode(statusCode: response.statusCode, response: response.body);
 
       // ignore: nullable_type_in_catch_clause
@@ -38,11 +40,13 @@ class PostServices {
   void checkStatusCode({required var statusCode, var response}) {
     switch (statusCode) {
       case (200):
-        responseBody = jsonDecode(response);
+        responseBody = (response);
+       
+
         break;
       case (404):
         responseBody = null;
-      
+
         break;
     }
   }

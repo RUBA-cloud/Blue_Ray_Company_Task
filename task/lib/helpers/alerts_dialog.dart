@@ -1,5 +1,5 @@
 
-import '../model/exportedPackages.dart';
+import '../model/exported_packages.dart';
 
 class AlertDialog{
   void alertDailog({ required String title,required String middleText}){

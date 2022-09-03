@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task/helpers/icons.dart';
 
-import '../model/exportedPackages.dart';
+import '../model/exported_packages.dart';
 
 class BottomNavigationView extends StatelessWidget {
   final BottomNavigationController controller;

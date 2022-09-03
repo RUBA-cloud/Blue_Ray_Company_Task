@@ -1,10 +1,10 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 
-import 'package:task/View/categories-pages/slider_row.dart';
+import 'package:task/View/slider_pages/slider_row.dart';
 
 
-import '../../model/exportedPackages.dart';
+import '../../model/exported_packages.dart';
 
 class SlidersWidget extends StatelessWidget {
   const SlidersWidget({super.key});
